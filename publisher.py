@@ -17,5 +17,6 @@ def publisher():
     connections.close()
 
 
+
 if __name__ == '__main__':
     publisher()
