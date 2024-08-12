@@ -13,7 +13,6 @@ def publisher():
         message = f'Message number {i+1}'
         channel.basic_publish(exchange='', routing_key='ABC', body=message)
         print(f'Sent: {message}')
-
     # Close the connection
     connections.close()
 
