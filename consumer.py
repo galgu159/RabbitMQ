@@ -14,7 +14,6 @@ def consumer():
     channel.queue_declare(queue='ABC')
     # Subscribe to the 'ABC' queue, process messages and after delete the message
     channel.basic_consume(queue='ABC', on_message_callback=callback, auto_ack=True)
-
     print('Ready to receive message. To exit press CTRL+C')
     channel.start_consuming()
 
